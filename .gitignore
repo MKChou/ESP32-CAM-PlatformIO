@@ -1,0 +1,17 @@
+# PlatformIO 編譯產物與快取
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# 內含 WiFi 帳密的私密設定（請勿上傳！）
+src/secrets.h
+
+# IDE / 編輯器
+.vscode/
+.idea/
+*.code-workspace
+
+# 作業系統雜項
+.DS_Store
+Thumbs.db
+desktop.ini
