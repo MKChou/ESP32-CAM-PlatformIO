@@ -12,7 +12,6 @@
 #include "esp_camera.h"
 #include <WiFi.h>
 #include "esp_http_server.h"
-#include "esp_timer.h"
 #include "soc/soc.h"           // 用於關閉 brownout 偵測器
 #include "soc/rtc_cntl_reg.h"
 
@@ -48,7 +47,6 @@
 #define VSYNC_GPIO_NUM 25
 #define HREF_GPIO_NUM 23
 #define PCLK_GPIO_NUM 22
-#define LED_GPIO_NUM 4   // 板載閃光燈 LED
 
 #elif defined(CAMERA_MODEL_WROVER_KIT)
 #define PWDN_GPIO_NUM -1
@@ -217,7 +215,6 @@ void setup() {
     config.fb_count = 2;
     config.grab_mode = CAMERA_GRAB_LATEST;
   } else {
-    config.frame_size = FRAMESIZE_SVGA;
     config.fb_location = CAMERA_FB_IN_DRAM;
     Serial.println("警告：未偵測到 PSRAM，使用較低設定");
   }

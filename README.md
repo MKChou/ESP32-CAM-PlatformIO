@@ -12,7 +12,7 @@
 - [PlatformIO](https://platformio.org/)
 - 2.4 GHz WiFi（ESP32 不支援 5 GHz）
 
-使用 ESP32-S3 系列的板子時，請改用 `platformio.ini` 最下方註解掉的設定，並在 `src/main.cpp` 切換 `CAMERA_MODEL`。
+使用 Seeed XIAO ESP32S3 Sense 時，請改用 `platformio.ini` 最下方註解掉的設定，並在 `src/main.cpp` 切換 `CAMERA_MODEL`。其他 ESP32-S3 板子目前沒有對應的腳位定義。
 
 ## 使用
 
@@ -48,6 +48,8 @@
 | --- | --- |
 | `/` | 含即時畫面的網頁 |
 | `/stream` | MJPEG 即時串流 |
+
+同一時間只能有一個瀏覽器觀看串流；串流進行中時，其他裝置連不上網頁。
 
 ## 授權
 
